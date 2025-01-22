@@ -158,6 +158,203 @@ p {
 
 
   /* end of animetion */
+  /* NAV-BAR */
+
+nav{
+  width: 100%;
+  transition: 0.3s;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--clr-primary-3);
+  flex-wrap: wrap;
+  /* width: 100%; */
+  border-bottom:3px solid var(--clr-secondary); 
+}
+nav a {
+  position: relative;
+  color: var(--clr-primary-light);
+  padding-top:2rem ;
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+nav a:not(:hover) .line{
+  transition: 0.2s;
+  position: absolute;
+  z-index: 3;
+  top:4.2rem;
+  background-color: var(--clr-primary);
+  width: 0%;
+  height: 4px;
+  border-radius: 2px;
+}
+nav a:hover .line{
+
+  position: absolute;
+  z-index: 3;
+  top:4.2rem;
+  background-color: var(--clr-primary);
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  animation: nav-line 0.3s ease-in;
+}
+
+
+@keyframes nav-line {
+ 0%{  opacity: 1;
+  width: 0%;
+ }
+ 10%{  opacity: 1;
+  width: 10%;
+ }
+ 20%{  opacity: 1;
+  width: 20%;
+ }
+ 30%{  opacity: 1;
+  width: 30%;
+ }
+ 40%{  opacity: 1;
+  width: 40%;
+ }
+ 50%{  opacity: 1;
+  width: 50%;
+ }
+ 60%{  opacity: 1;
+  width: 60%;
+ }
+ 70%{  opacity: 1;
+  width: 70%;
+ }
+ 80%{  opacity: 1;
+  width: 80%;
+ }
+ 90%{  opacity: 1;
+  width: 90%;
+ }
+ 100%{  opacity: 1;
+  width: 100%;
+ }
+}
+.dropdown a {
+  position: relative;
+  color: var(--clr-primary-light);
+  padding-top:2rem ;
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.dropdown {
+  z-index: 2;
+  position: fixed;
+  display: inline-block;
+  width: 100%;
+  background-color: var(--clr-primary-3);
+  text-align: center;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 3px solid var(--clr-secondary);
+
+}
+.dropdown a:not(:hover) .line{
+  transition: 0.2s;
+  position: absolute;
+  z-index: 3;
+  top:3rem;
+  width: 0%;
+  background-color: var(--clr-primary);
+
+  height: 4px;
+  border-radius: 2px;
+}
+.dropdown a:hover .line{
+
+  position: absolute;
+  z-index: 3;
+  top:3rem;
+  background-color: var(--clr-primary);
+  width: 50%;
+  height: 3px;
+  border-radius: 2px;
+  animation: drop-line 0.3s ease-in;
+}
+
+.dropdown button {
+  background-color: var(--clr-primary-3); /* Green */
+  color: var(--clr-primary-light);
+  padding: 0.6rem 1.2rem;
+  font-size: 1.4rem;
+  border: none;
+}
+
+
+
+
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  left: 0;
+  background-color: var(--clr-primary-3);
+  min-width: 160px;
+  z-index: 1;
+  text-align: left;
+  font-size: 1.4rem;
+}
+.dropdown-content a {
+  color: var(--clr-primary-light);
+  padding: 0.7rem 1rem;
+  display: block; 
+  text-transform: uppercase;
+
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+transform: translate(0,0);
+width: 100%;
+color: var(--clr-primary-light);
+}
+@keyframes drop-line {
+  0%{  opacity: 1;
+   width: 0%;
+  }
+  20%{  opacity: 1;
+   width: 10%;
+  }
+  40%{  opacity: 1;
+   width: 20%;
+  }
+  60%{  opacity: 1;
+   width: 30%;
+  }
+  80%{  opacity: 1;
+   width: 40%;
+  }
+  100%{  opacity: 1;
+   width: 50%;
+  }
+ }
+@media (min-width:768px) {
+  .dropdown{
+    display: none;
+  }
+}
+@media (max-width:768px) {
+nav{
+  display: none;
+}
+}
+
+  /* END OF NAV BAR */
   /* header */
   .header {
     min-height: 100vh;
@@ -287,12 +484,13 @@ color: var(--clr-primary-3);
   }
   .more{
     background-color: var(--clr-primary-light);
-    color: var(--clr-white);
+    color: var(--clr-grey-2);
     border-radius: var(--radius);
     letter-spacing: var(--spacing);
     text-transform: uppercase;
     padding: 0.75rem 1rem;
     transition: var(--transition);
+    font-size:1.3rem;
   }
   .more:hover{
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
@@ -388,12 +586,13 @@ color: var(--clr-primary-3);
   }
   .btn-pro{
     background-color: var(--clr-primary-light);
-    color: var(--clr-white);
+    color: var(--clr-grey-2);
     border-radius: var(--radius);
     letter-spacing: var(--spacing);
     text-transform: uppercase;
     padding: 0.75rem 1rem;
-    transition: var(--transition)
+    transition: var(--transition);
+    font-size: 1.3rems;
     
   }
   .btn-pro:hover{
@@ -493,13 +692,14 @@ color: var(--clr-primary-3);
     font-size: 1rem;
   }
   .service-btn {
-    color: var(--clr-white);
+    color: var(--clr-grey-2);
     text-transform: uppercase;
     letter-spacing: var(--spacing);
     border-radius: 0.75rem;
     background-color: var(--clr-primary-light);  
     padding: 0.75rem 1rem;
     transition: 1s;
+    font-size: 1.2rem;
    
   }
   .service-btn:hover{

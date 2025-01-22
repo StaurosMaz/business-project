@@ -13,19 +13,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <body>
+    
+        <!-- nav-bar -->
+        <nav class=" nav-bar"> 
+            <a href="#backtotop" class="top-nav linefix"><span class="line"></span>back to top</a>
+            <a href="#skills" class="skills-nav linefix"><span class="line"></span>Skills</a>
+            <a href="#aboutus" class="about-nav linefix"><span class="line"></span>About Us / products </a>
+            <a href="#contact" class="cont-nav linefix"><span class="line"></span>contact</a>
+        </nav>
+        <div class="dropdown">
+            <button>MENU</button>
+            <div class="dropdown-content">
+                <a href="#backtotop" class="top-nav"><span class="line"></span>back to top</a>
+                <a href="#skills" class="skills-nav"><span class="line"></span>Skills</a>
+                <a href="#aboutus" class="about-nav"><span class="line"></span>About Us / products </a>
+                <a href="#contact" class="cont-nav"><span class="line"></span>contact</a>
+            </div>
+        </div>
+        <!--end of nav-bar -->
         <!-- header -->
-     
+        <div id="backtotop"></div>
         <header class="header">
             <div class="banner">
                 <h2>Lorem ipsum dolor sit amet.</h2>
-                <h1>Lorem, ipsum. <br> Over <span>21</span> Countries</h1>
+                <h1>Lorem, ipsum. <br> Over <span>21</span> Countries</h1> 
+                <div id="skills"></div>
                 <a href="#" class="hero-btn">EXPLORE</a>
             </div>
         </header>
         <!-- skills -->
+        
         <div class="div-line"></div>
-        <section class="skill clearfix">
+        <section class="skill clearfix" >
             <div class="skill-card">
                 <div class="socialize">
                     <div class="skill-icon"><i class="fas fa-mug-hot"></i></div>
@@ -46,7 +65,7 @@
                     <h4>Boost Up</h4>
                     <p>Lorem ipsum dolor sit amet <br>consectetur adipisicing elit. Similique, earum.</p>
                 </div>
-            </div>
+            </div><div id="aboutus"></div>
             </section>
         <!-- about-us -->
             <section class="about-section">
@@ -72,7 +91,7 @@
             </section>
         <!-- end about us -->
         <!-- products -->
-            <section class="products">
+            <section class="products" >
                 <div class="section-center clearfix">
                     <article class="product-info">
                         <div class="product-title">
@@ -104,6 +123,7 @@
                     </article>
                 </div>
             </section>
+            
         <!-- end of products -->
         <!-- services -->
         <section class="services">
@@ -185,7 +205,7 @@
         <!-- end of services -->
         <!-- contact form -->
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="section-center clearfix">
                 <!-- contact-items -->
             <div class="contact-info">
@@ -238,5 +258,5 @@
      
         <!--end of footer -->
     </body>
-</body>
+
 </html>
